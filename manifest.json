@@ -1,0 +1,18 @@
+{
+  "name": "Pink Miceli Matrix",
+  "version": "1",
+  "manifest_version" : 2,
+  "description": "Remember the cool computer screens from the Matrix? I added personalized messages, and make it pink. Fork yours from https://github.com/janemiceli/chrome-extension-MiceliMatrix",
+  "author" : "Jane Miceli (@jane@janemiceli.com)",
+  "offline_enabled" : true,
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+    "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["matrix/style.css" , "matrix/style.scss"],
+      "js": ["matrix/script.js","matrix/excanvas.js","matrix/stats.min.js", "matrix/excanvas.compiled.js"]
+    }
+  ]
+}
